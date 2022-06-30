@@ -24,7 +24,7 @@ This is my first attempt ever at writing pseudocode. From my writing and transla
         - PRINT draw message
     - ELSE
         - IF
-        - user choice is rock AND computer choice is paper
+        - user choice is rock AND computer choice is scissors
         - OR
         - user choice is paper AND computer choice is rock
         - OR
@@ -33,7 +33,7 @@ This is my first attempt ever at writing pseudocode. From my writing and transla
             - PRINT win message
         - ELSE
             - IF
-            - user choice is rock AND computer choice is scissors
+            - user choice is rock AND computer choice is paper
             - OR
             - user choice is paper AND computer choice is scissors
             - OR
