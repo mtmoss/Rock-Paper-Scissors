@@ -4,16 +4,15 @@ function computerPlay() {
 }
 
 function playRound(a,b) {
-    const aLowerCase = a.toLowerCase();
-    if (aLowerCase == b) {
-        return `We both chose ${aLowerCase}. It\'s a draw!`;
-    } else if ((aLowerCase == 'rock' && b == 'scissors') || (aLowerCase == 'paper' && b == 'rock') || (aLowerCase == 'scissors' && b == 'paper')) {
-        return `You chose ${aLowerCase} and I chose ${b}. Fine, you win...`;
-    } else if ((aLowerCase == 'rock' && b == 'paper') || (aLowerCase == 'paper' && b == 'scissors') || (aLowerCase == 'scissors' && b == 'rock')) {
-        return `You chose ${aLowerCase} and I chose ${b}. Ha! You lose!`;
+    if (a == b) {
+        return `We both chose ${a}. It\'s a draw!`;
+    } else if ((a == 'rock' && b == 'scissors') || (a == 'paper' && b == 'rock') || (a == 'scissors' && b == 'paper')) {
+        return `You chose ${a} and I chose ${b}. Fine, you win...`;
+    } else if ((a == 'rock' && b == 'paper') || (a == 'paper' && b == 'scissors') || (a == 'scissors' && b == 'rock')) {
+        return `You chose ${a} and I chose ${b}. Ha! You lose!`;
     };
 }
 
-let playerSelection = prompt('Can you beat me? Enter "rock", "paper" or "scissors".');
+let playerSelection = prompt('Can you beat me? Enter "rock", "paper" or "scissors".').toLowerCase();
 let computerSelection = computerPlay();
 console.log(playRound(playerSelection,computerSelection));
