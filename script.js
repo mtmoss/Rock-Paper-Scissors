@@ -4,7 +4,9 @@ function computerPlay() {
 }
 
 function playRound(a,b) {
-    if (a == b) {
+    if (a !== ('rock' || 'paper' || 'scissors')) {
+        return 'Not a valid choice. Refresh the page to check for typos and try again.';
+    } else if (a == b) {
         return `We both chose ${a}. It\'s a draw!`;
     } else if ((a == 'rock' && b == 'scissors') || (a == 'paper' && b == 'rock') || (a == 'scissors' && b == 'paper')) {
         return `You chose ${a} and I chose ${b}. Fine, you win...`;
