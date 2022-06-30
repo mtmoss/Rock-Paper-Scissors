@@ -17,45 +17,43 @@ This is how I thought this project should function, given the exercise instructi
 
 This is my first attempt ever at writing pseudocode. From my writing and translation background, I know how important it is to begin with a skeleton of what you're planning to put out in the world.
 
-FOR 5 rounds
-    GET computer choice of rock, paper or scissors at random
-    GET user choice of rock, paper or scissors via prompt (case insensitive)
-    IF user choice EQUALS computer choice THEN
-        PRINT draw message
-    ELSE
-        IF
-        user choice is rock AND computer choice is paper
-        OR
-        user choice is paper AND computer choice is rock
-        OR
-        user choice is scissors AND computer choice is paper
-        THEN
-            PRINT win message
-        ELSE
-            IF
-            user choice is rock AND computer choice is scissors
-            OR
-            user choice is paper AND computer choice is scissors
-            OR
-            user choice is scissors AND computer choice is rock
-            THEN
-                PRINT lose message
-            END IF
-        END IF
-    END IF
-END FOR
-
-CALCULATE number of user wins
-CALCULATE number of computer wins
-
-IF user wins EQUALS computer wins THEN
-    PRINT final draw message
-ELSE
-    IF user wins GREATER THAN computer wins THEN
-        PRINT final win message
-    ELSE
-        IF user wins LESS THAN computer wins THEN
-        PRINT final lose message
-        END IF
-    END IF
-END IF
+- FOR 5 rounds
+    - GET computer choice of rock, paper or scissors at random
+    - GET user choice of rock, paper or scissors via prompt (case insensitive)
+    - IF user choice EQUALS computer choice THEN
+        - PRINT draw message
+    - ELSE
+        - IF
+        - user choice is rock AND computer choice is paper
+        - OR
+        - user choice is paper AND computer choice is rock
+        - OR
+        - user choice is scissors AND computer choice is paper
+        - THEN
+            - PRINT win message
+        - ELSE
+            - IF
+            - user choice is rock AND computer choice is scissors
+            - OR
+            - user choice is paper AND computer choice is scissors
+            - OR
+            - user choice is scissors AND computer choice is rock
+            - THEN
+                - PRINT lose message
+            - END IF
+        - END IF
+    - END IF
+- END FOR
+- CALCULATE number of user wins
+- CALCULATE number of computer wins
+- IF user wins EQUALS computer wins THEN
+    - PRINT final draw message
+- ELSE
+    - IF user wins GREATER THAN computer wins THEN
+        - PRINT final win message
+    - ELSE
+        - IF user wins LESS THAN computer wins THEN
+        - PRINT final lose message
+        - END IF
+    - END IF
+- END IF
