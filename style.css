@@ -1,20 +1,29 @@
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
+    gap: 10px;
 }
 
 .welcomeMessage {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
     font-size: 72px;
     text-transform: uppercase;
     display: flex;
     -webkit-animation:colorchange 20s infinite alternate;
+    margin: 0;
     }
+
+.subtext {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 14px;
+    color:#34495e;
+    margin: 0;
+}
 
 @-webkit-keyframes colorchange {
     0% {
