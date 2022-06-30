@@ -1,0 +1,16 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.welcomeMessage {
+    font-weight: bold;
+    font-size: 72px;
+    text-transform: uppercase;
+    display: flex;
+}
