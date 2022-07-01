@@ -2,6 +2,8 @@
 
 This is yet another exercise from [The Odin Project](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors). I'll be training and developing the very early stages of my skills in JavaScript.
 
+[See it live](https://mtmoss.github.io/Rock-Paper-Scissors/)
+
 ## The algorithm for this application
 
 This is how I thought this project should function, given the exercise instructions (see link above).
