@@ -59,3 +59,10 @@ This is my first attempt ever at writing pseudocode. From my writing and transla
         - END IF
     - END IF
 - END IF
+
+## Adding UI
+
+After the game was running successfully on the console, it was time to add a user interface. This brought on another set of challenges, namely manipulating the HTML DOM. Here's my thought process.
+
+- DECLARE buttons
+- 
