@@ -1,24 +1,54 @@
+// Defines computer move at random
+
 const plays = ['rock','paper','scissors'];
 function computerPlay() {
     return plays[Math.floor(Math.random()*plays.length)];
 };
 
+
+// Defines player move according to which button is clicked
+
+function playRound(playerSelection,computerSelection) {
+    if (playerSelection == computerSelection) {
+        console.log(`We both chose ${playerSelection}. It's a draw!`);
+    } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') || (playerSelection == 'scissors' && computerSelection == 'paper')) {
+        // ++playerScore;
+        console.log(`You chose ${playerSelection} and I chose ${computerSelection}. Fine, you win...`);
+    } else if ((playerSelection == 'rock' && computerSelection == 'paper') || (playerSelection == 'paper' && computerSelection == 'scissors') || (playerSelection == 'scissors' && computerSelection == 'rock')) {
+        // ++computerScore;
+        console.log(`You chose ${playerSelection} and I chose ${computerSelection}. Ha! You lose!`);
+    };
+};
+
+let rockButton = document.getElementById('rockButton');
+let paperButton = document.getElementById('paperButton');
+let scissorsButton = document.getElementById('scissorsButton');
+
+rockButton.addEventListener('click', () => {
+    let playerSelection = 'rock';
+    let computerSelection = computerPlay();
+    playRound(playerSelection,computerSelection)});
+paperButton.addEventListener('click', () => {
+    let playerSelection = 'paper';
+    let computerSelection = computerPlay();
+    playRound(playerSelection,computerSelection)});
+scissorsButton.addEventListener('click', () => {
+    let playerSelection = 'scissors';
+    let computerSelection = computerPlay();
+    playRound(playerSelection,computerSelection)});
+
+
+
+
+
+/*
+let resultAreaElement = document.getElementById('resultArea');
+let resultNode = document.createTextNode('testing clicks');
+resultAreaElement.appendChild(resultNode);
+
 let playerScore = 0;
 let computerScore = 0;
 
-function playRound(a,b) {
-    if (a !== ('rock' || 'paper' || 'scissors')) {
-        return 'Not a valid choice. Refresh the page to check for typos and try again.';
-    } else if (a == b) {
-        return `We both chose ${a}. It's a draw!`;
-    } else if ((a == 'rock' && b == 'scissors') || (a == 'paper' && b == 'rock') || (a == 'scissors' && b == 'paper')) {
-        ++playerScore;
-       return `You chose ${a} and I chose ${b}. Fine, you win...`;
-    } else if ((a == 'rock' && b == 'paper') || (a == 'paper' && b == 'scissors') || (a == 'scissors' && b == 'rock')) {
-        ++computerScore
-        return `You chose ${a} and I chose ${b}. Ha! You lose!`;
-    };
-};
 
 function game() {
     for (let i = 0; i <5; ++i) {
@@ -37,3 +67,4 @@ function game() {
 };
 
 game();
+*/
