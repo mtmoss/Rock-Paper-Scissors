@@ -18,7 +18,15 @@ function playRound(a,b) {
     };
 };
 
-const rockBtn = document.getElementById('rock');
+const buttons = Array.from(document.getElementsByClassName('button'));
+buttons.forEach(button => {
+    button.addEventListener('click',() => {
+        let playerSelection = button.id;
+        console.log(playerSelection);
+    });
+});
+
+/* const rockBtn = document.getElementById('rock');
 const paperBtn = document.getElementById('paper');
 const scissorsBtn = document.getElementById('scissors');
 
@@ -42,4 +50,4 @@ scissorsBtn.addEventListener('click',() => {
     playRound(playerSelection,computerSelection);
     console.log(`You: ${playerScore} vs. Me: ${computerScore}`);
     }
-);
+); */
