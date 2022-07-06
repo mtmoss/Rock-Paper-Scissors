@@ -64,5 +64,14 @@ This is my first attempt ever at writing pseudocode. From my writing and transla
 
 After the game was running successfully on the console, it was time to add a user interface. This brought on another set of challenges, namely manipulating the HTML DOM. Here's my thought process.
 
-- DECLARE buttons
-- 
+1. Create a function that plays 1 round
+- Declare 3 buttons in the same "button" class but with rock, paper, scissors identifiers
+- Add event listener click to all buttons
+- Pass clicked button ID as player selection
+- Compare player selection to computer selection (chosen at random)
+
+2. Create a function that:
+    1. Runs the round function 5 times
+    2. Keeps player score and computer score
+    3. Compares scores
+    4. Declares a winner
