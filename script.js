@@ -6,6 +6,9 @@ function computerPlay() {
 let playerScore = 0;
 let computerScore = 0;
 
+let resultArea = document.getElementById('resultArea')
+resultArea.textContent = 'Results';
+
 function playRound(a,b) {
     if (a == b) {
         console.log(`We both chose ${a}. It's a draw!`);
@@ -27,3 +30,4 @@ buttons.forEach(button => {
         playRound(playerSelection,computerSelection);
     });
 });
+
