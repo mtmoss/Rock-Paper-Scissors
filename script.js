@@ -6,8 +6,9 @@ function computerPlay() {
 let playerScore = 0;
 let computerScore = 0;
 
-let resultArea = document.getElementById('resultArea')
+const resultArea = document.getElementById('resultArea')
 resultArea.textContent = 'Results';
+const para = document.createElement('p');
 
 function playRound(a,b) {
     if (a == b) {
@@ -19,7 +20,7 @@ function playRound(a,b) {
         ++computerScore;
         console.log(`You chose ${a} and I chose ${b}. Ha! You lose!`);
     };
-    console.log(`FINAL SCORE: Me ${computerScore} x You ${playerScore}.`);
+    resultArea.textContent = `AI ${computerScore} x ${playerScore} YOU`;
 };
 
 const buttons = Array.from(document.getElementsByClassName('button'));
