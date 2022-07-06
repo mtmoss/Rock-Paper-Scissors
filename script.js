@@ -16,38 +16,14 @@ function playRound(a,b) {
         ++computerScore;
         console.log(`You chose ${a} and I chose ${b}. Ha! You lose!`);
     };
+    console.log(`FINAL SCORE: Me ${computerScore} x You ${playerScore}.`);
 };
 
 const buttons = Array.from(document.getElementsByClassName('button'));
 buttons.forEach(button => {
     button.addEventListener('click',() => {
         let playerSelection = button.id;
-        console.log(playerSelection);
+        let computerSelection = computerPlay();
+        playRound(playerSelection,computerSelection);
     });
 });
-
-/* const rockBtn = document.getElementById('rock');
-const paperBtn = document.getElementById('paper');
-const scissorsBtn = document.getElementById('scissors');
-
-rockBtn.addEventListener('click',() => {
-    let playerSelection = 'rock';
-    let computerSelection = computerPlay();
-    playRound(playerSelection,computerSelection);
-    console.log(`You: ${playerScore} vs. Me: ${computerScore}`);
-    }
-);
-paperBtn.addEventListener('click',() => {
-    let playerSelection = 'paper';
-    let computerSelection = computerPlay();
-    playRound(playerSelection,computerSelection);
-    console.log(`You: ${playerScore} vs. Me: ${computerScore}`);
-    }
-);
-scissorsBtn.addEventListener('click',() => {
-    let playerSelection = 'scissors';
-    let computerSelection = computerPlay();
-    playRound(playerSelection,computerSelection);
-    console.log(`You: ${playerScore} vs. Me: ${computerScore}`);
-    }
-); */
