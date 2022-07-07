@@ -15,63 +15,20 @@ This is how I thought this project should function, given the exercise instructi
 4. Console prints the winner of each round
 5. Console prints final winner
 
-## Pseudocode
+## Adding an UI
 
-This is my first attempt ever at writing pseudocode. From my writing and translation background, I know how important it is to begin with a skeleton of what you're planning to put out in the world.
+After the game was running successfully on the console, it was time to add a user interface.
 
-- FOR 5 rounds
-    - GET computer choice of rock, paper or scissors at random
-    - GET user choice of rock, paper or scissors via prompt (case insensitive)
-    - IF user choice EQUALS computer choice THEN
-        - PRINT draw message
-    - ELSE
-        - IF
-        - user choice is rock AND computer choice is scissors
-        - OR
-        - user choice is paper AND computer choice is rock
-        - OR
-        - user choice is scissors AND computer choice is paper
-        - THEN
-            - PRINT win message
-        - ELSE
-            - IF
-            - user choice is rock AND computer choice is paper
-            - OR
-            - user choice is paper AND computer choice is scissors
-            - OR
-            - user choice is scissors AND computer choice is rock
-            - THEN
-                - PRINT lose message
-            - END IF
-        - END IF
-    - END IF
-- END FOR
-- CALCULATE number of user wins
-- CALCULATE number of computer wins
-- IF user wins EQUALS computer wins THEN
-    - PRINT final draw message
-- ELSE
-    - IF user wins GREATER THAN computer wins THEN
-        - PRINT final win message
-    - ELSE
-        - IF user wins LESS THAN computer wins THEN
-        - PRINT final lose message
-        - END IF
-    - END IF
-- END IF
+If in the first iteration of the game, the player's move was obtained from a `prompt()` text input. Now, 
 
-## Adding UI
+This brought on another set of challenges, namely manipulating the HTML DOM. It took me way too long to figure out that `.getElementsByClassName` does *not* automatically return an array :) This misunderstanding was a major hiccup and the main bottleneck for this project. After that, the logic worked smoothly with squeaky clean code.
 
-After the game was running successfully on the console, it was time to add a user interface. This brought on another set of challenges, namely manipulating the HTML DOM. Here's my thought process.
+It was a really humbling experience to realize that an entire logic can be dependent on the smallest of details.
 
-1. Create a function that plays 1 round
-- Declare 3 buttons in the same "button" class but with rock, paper, scissors identifiers
-- Add event listener click to all buttons
-- Pass clicked button ID as player selection
-- Compare player selection to computer selection (chosen at random)
+## Improving the UX
 
-2. Create a function that:
-    1. Runs the round function 5 times
-    2. Keeps player score and computer score
-    3. Compares scores
-    4. Declares a winner
+So far, so good, the game works. But visually, it only made sense to the person who could read the code from the inside, i.e. me.
+
+Because proper UX research and implementation is not in the scope of this project, I relied only on my ability to put myself in the user's shoes, a crucial skill from my years reviewing product localization and translation.
+
+The game is very confusing from a user perspective, as it appears the AI moves come out of nowhere. Well, they do, but I needed the user to feel like they're actually playing against an intelligence that ponders every move. To achieve this, I added `div`s that represented the computer's choice, with a small delay to make the selection. The result of the round is then shown below the game area.
