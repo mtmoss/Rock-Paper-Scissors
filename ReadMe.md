@@ -1,8 +1,9 @@
-### Rock Paper Scissors
+# Rock Paper Scissors
 
-This is yet another exercise from [The Odin Project](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors). I'll be training and developing the very early stages of my skills in JavaScript.
+This is yet another exercise from [The Odin Project](https://www.theodinproject.com). I'll be training and developing the very early stages of my skills in JavaScript.
 
-[See it live](https://mtmoss.github.io/Rock-Paper-Scissors/)
+- [Project instructions](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors).
+- [Live final result](https://mtmoss.github.io/Rock-Paper-Scissors/)
 
 ## The algorithm for this application
 
@@ -19,9 +20,11 @@ This is how I thought this project should function, given the exercise instructi
 
 After the game was running successfully on the console, it was time to add a user interface.
 
-If in the first iteration of the game, the player's move was obtained from a `prompt()` text input. Now, 
+If in the first iteration of the game, the player's move was obtained from a `prompt()` text input. Now, the idea was to give the player three visual choices to click on: *rock*, *paper* or *scissors*.
 
-This brought on another set of challenges, namely manipulating the HTML DOM. It took me way too long to figure out that `.getElementsByClassName` does *not* automatically return an array :) This misunderstanding was a major hiccup and the main bottleneck for this project. After that, the logic worked smoothly with squeaky clean code.
+### The challenge: manipulating the HTML DOM
+
+It took me way too long to figure out that `.getElementsByClassName` does *not* automatically return an array :poop: This misunderstanding was a major hiccup and the main bottleneck for this project. After that, the logic worked smoothly with squeaky clean code.
 
 It was a really humbling experience to realize that an entire logic can be dependent on the smallest of details.
 
