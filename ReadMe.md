@@ -1,4 +1,4 @@
-# Rock Paper Scissors
+# Minimalist, Text-Only Rock Paper Scissors
 
 This is yet another exercise from [The Odin Project](https://www.theodinproject.com). I'll be training and developing the very early stages of my skills in JavaScript.
 
@@ -21,6 +21,8 @@ This is how I thought this project should function, given the exercise instructi
 After the game was running successfully on the console, it was time to add a user interface.
 
 If in the first iteration of the game, the player's move was obtained from a `prompt()` text input. Now, the idea was to give the player three visual choices to click on: *rock*, *paper* or *scissors*.
+
+Because the scope of this exercise is the game functionality and manipulating the DOM so that the player can interact with it, I decided to make a very minimalist, text-only UI. I like the brutalist style, so I think it turned out pretty.
 
 ### The challenge: manipulating the HTML DOM
 
