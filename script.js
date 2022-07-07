@@ -22,11 +22,22 @@ function playRound(a,b) {
     finalScore.innerHTML = 'You <span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span> Me';
 };
 
+function declareWinner() {
+    if (playerScore > computerScore) {
+        finalScore.innerHTML = 'Final score:<br><span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span><br>You win!';
+    } else {
+        finalScore.innerHTML = 'Final score:<br><span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span><br>You lose!';
+    }
+};
+
 const buttons = Array.from(document.getElementsByClassName('button'));
 buttons.forEach(button => {
     button.addEventListener('click',() => {
         let playerSelection = button.id;
         let computerSelection = computerPlay();
         playRound(playerSelection,computerSelection);
+        if (playerScore === 5 || computerScore === 5) {
+            declareWinner();
+          };
     });
 });
