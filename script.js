@@ -7,16 +7,19 @@ let playerScore = 0;
 let computerScore = 0;
 
 const resultArea = document.getElementById('resultArea')
-resultArea.textContent = 'Results';
-const para = document.createElement('p');
+const finalScore = document.getElementById('finalScore');
 
 function playRound(a,b) {
-    if ((a == 'rock' && b == 'scissors') || (a == 'paper' && b == 'rock') || (a == 'scissors' && b == 'paper')) {
+    if (a == b) {
+        resultArea.innerHTML = '<span>' + a + '</span> and <span>' + b + '</span>: it\'s a draw!';
+    } else if ((a == 'rock' && b == 'scissors') || (a == 'paper' && b == 'rock') || (a == 'scissors' && b == 'paper')) {
+        resultArea.innerHTML = 'Your <span>' + a + '</span> beats my <span>' + b + '</span>: you win!';
         ++playerScore;
     } else if ((a == 'rock' && b == 'paper') || (a == 'paper' && b == 'scissors') || (a == 'scissors' && b == 'rock')) {
+        resultArea.innerHTML = 'My <span>' + b + '</span> beats your <span>' + a + '</span>: you lose!';
         ++computerScore;
     };
-    resultArea.textContent = `AI ${computerScore} x ${playerScore} YOU`;
+    finalScore.innerHTML = 'You <span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span> Me';
 };
 
 const buttons = Array.from(document.getElementsByClassName('button'));
@@ -27,4 +30,3 @@ buttons.forEach(button => {
         playRound(playerSelection,computerSelection);
     });
 });
-

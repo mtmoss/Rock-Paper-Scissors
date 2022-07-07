@@ -34,4 +34,4 @@ So far, so good, the game works. But visually, it only made sense to the person 
 
 Because proper UX research and implementation is not in the scope of this project, I relied only on my ability to put myself in the user's shoes, a crucial skill from my years reviewing product localization and translation.
 
-The game is very confusing from a user perspective, as it appears the AI moves come out of nowhere. Well, they do, but I needed the user to feel like they're actually playing against an intelligence that ponders every move. To achieve this, I added `div`s that represented the computer's choice, with a small delay to make the selection. The result of the round is then shown below the game area.
+The game is very confusing from a user perspective, as it appears the AI moves come out of nowhere. Well, they do, but I needed the user to feel like they were actually playing against an intelligence that ponders every move. To achieve this, I added `div`s that represented the computer's choice, with a small delay to make the selection. The result of the round is then shown below the game area.

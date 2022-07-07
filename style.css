@@ -10,10 +10,25 @@ body {
     gap: 10px;
 }
 
-#resultArea {
+.playerArea {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.heading, #finalScore {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: xx-large;
+    font-size: larger;
     margin-top: 50px;
+}
+
+.arena {
+    display: flex;
+    width: 450px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .button {
@@ -22,9 +37,24 @@ body {
     margin: 20px;
     width: 100px;
     text-align: center;
+    font-weight: bold;
 }
 
-.button:hover, .button:focus, .button:target {
-    background-color: darkgray;
+.button:hover {
+    background-color: coral;
     cursor: pointer;
+}
+
+#resultArea, .intro {
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+span {
+    color: coral;
+}
+
+.intro {
+    text-align: center;
 }
