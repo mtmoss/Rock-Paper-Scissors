@@ -1,14 +1,32 @@
+let playerScore = 0;
+let computerScore = 0;
+const resultArea = document.getElementById('resultArea')
+const runningScore = document.getElementById('runningScore');
+const arena = document.getElementById('arena');
+const overlay = document.getElementById('overlay');
+const finalResult = document.getElementById('finalResult');
+const retryButton = document.getElementById('retryButton');
+const buttons = Array.from(document.getElementsByClassName('button'));
+
+buttons.forEach(button => {
+    button.addEventListener('click',() => {
+        let playerSelection = button.id;
+        let computerSelection = computerPlay();
+            playRound(playerSelection,computerSelection);
+            if (playerScore === 5 || computerScore === 5) {
+                declareWinner();
+            };
+    });
+});
+
+
+// Generates computer move at random
 const plays = ['rock','paper','scissors'];
 function computerPlay() {
     return plays[Math.floor(Math.random()*plays.length)];
 };
 
-let playerScore = 0;
-let computerScore = 0;
-
-const resultArea = document.getElementById('resultArea')
-const finalScore = document.getElementById('finalScore');
-
+// Plays one round of rock, paper, scissors, displays the winner of the round and keeps score
 function playRound(a,b) {
     if (a == b) {
         resultArea.innerHTML = '<span>' + a + '</span> and <span>' + b + '</span>: it\'s a draw!';
@@ -19,25 +37,20 @@ function playRound(a,b) {
         resultArea.innerHTML = 'My <span>' + b + '</span> beats your <span>' + a + '</span>: you lose!';
         ++computerScore;
     };
-    finalScore.innerHTML = 'You <span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span> Me';
+    runningScore.innerHTML = 'You <span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span> Me';
 };
 
+// Shows a message over the entire page declaring the final winner
 function declareWinner() {
+    overlay.classList.add('active');
     if (playerScore > computerScore) {
-        finalScore.innerHTML = 'Final score:<br><span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span><br>You win!';
+        finalResult.innerHTML = 'Final score:<br><span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span><br>You win!';
     } else {
-        finalScore.innerHTML = 'Final score:<br><span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span><br>You lose!';
-    }
+        finalResult.innerHTML = 'Final score:<br><span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span><br>You lose!';
+    };
+    // Hides the message and restarts the game
+    retryButton.addEventListener('click', () => {
+        overlay.classList.remove('active');
+    });
 };
 
-const buttons = Array.from(document.getElementsByClassName('button'));
-buttons.forEach(button => {
-    button.addEventListener('click',() => {
-        let playerSelection = button.id;
-        let computerSelection = computerPlay();
-        playRound(playerSelection,computerSelection);
-        if (playerScore === 5 || computerScore === 5) {
-            declareWinner();
-          };
-    });
-});

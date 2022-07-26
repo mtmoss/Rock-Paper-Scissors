@@ -2,7 +2,7 @@
 
 This is yet another exercise from [The Odin Project](https://www.theodinproject.com). I'll be training and developing the very early stages of my skills in JavaScript.
 
-- [Project instructions](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors)
+- [Project instructions](https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors)
 - [Live project](https://mtmoss.github.io/Rock-Paper-Scissors/)
 
 ## The algorithm for this application
@@ -16,7 +16,7 @@ This is how I thought this project should function, given the exercise instructi
 4. Console prints the winner of each round
 5. Console prints final winner
 
-## Adding an UI
+## Adding a UI
 
 After the game was running successfully on the console, it was time to add a user interface.
 

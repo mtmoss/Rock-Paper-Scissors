@@ -5,18 +5,26 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 <body>
+
     <div class="arena">
-    <div class="intro">It's you versus me in this epic game of Rock Paper Scissors.<br><br>First one to score 5 points is the winner.</div>
-    <p class="heading">Choose wisely:</p>
+        <div class="intro">It's you versus me in this epic game of Rock Paper Scissors.<br><br>First one to score 5 points is the winner.</div>
+        <p class="heading">Choose wisely:</p>
         <div class="playerArea">
             <div class="button" id="rock">rock</div>
             <div class="button" id="paper">paper</div>
             <div class="button" id="scissors">scissors</div>
         </div>
-    <div id="resultArea"></div>
+        <div id="resultArea"></div>
 
-    <div id="finalScore"></div>
-</div>
+        <div id="runningScore"></div>
+    </div>
+
+    <div id="overlay">
+        <div id="finalResult"></div>
+        <div id="retryButton">Play Again</div>
+    </div>
+
     <script src='script.js'></script>
+
 </body>
 </html>
