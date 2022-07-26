@@ -26,4 +26,7 @@ Resuming this project after 3 weeks away due to extra workload and doing intervi
 - Refactored: differentiate variables `runningScore` and `finalScore`
 - Element `arena` can't be modified because the functions depend on elements inside of it
 - Instead of replacing `arena` with the final score, create `overlay` div to go on top of everything
-- Create `endGame()` function
+
+### Next:
+
+- Reset scores to 0 upon clicking on `retryButton` (not working)
