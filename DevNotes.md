@@ -30,3 +30,15 @@ Resuming this project after 3 weeks away due to extra workload and doing intervi
 ### Next:
 
 - Reset scores to 0 upon clicking on `retryButton` (not working)
+
+## 07/28/2022
+
+- Try to put the button clicks in a loop
+- Loop not working
+- I'm starting to think my whole logic is off...
+- The game is dependent on the player clicking a choice. Maybe it's the click event listener that's off...
+- I think I need more functions?
+    - `playRound()`
+    - `declareWinner()`
+    - `restartGame()`
+- The score is shown as a number, should convert to string

@@ -8,17 +8,19 @@ const finalResult = document.getElementById('finalResult');
 const retryButton = document.getElementById('retryButton');
 const buttons = Array.from(document.getElementsByClassName('button'));
 
-buttons.forEach(button => {
-    button.addEventListener('click',() => {
-        let playerSelection = button.id;
-        let computerSelection = computerPlay();
-            playRound(playerSelection,computerSelection);
-            if (playerScore === 5 || computerScore === 5) {
-                declareWinner();
-            };
+while (playerScore < 5 || computerScore < 5) {
+    buttons.forEach(button => {
+        button.addEventListener('click',() => {
+            let playerSelection = button.id;
+            let computerSelection = computerPlay();
+                playRound(playerSelection,computerSelection);
+                if (playerScore === 5 || computerScore === 5) {
+                    declareWinner();
+                };
+        });
     });
-});
-
+    break;
+};
 
 // Generates computer move at random
 const plays = ['rock','paper','scissors'];
@@ -48,9 +50,11 @@ function declareWinner() {
     } else {
         finalResult.innerHTML = 'Final score:<br><span>' + playerScore + '</span> &#10006; <span>' + computerScore + '</span><br>You lose!';
     };
-    // Hides the message and restarts the game
+    // Hides the message
     retryButton.addEventListener('click', () => {
         overlay.classList.remove('active');
+        playerScore = 0;
+        computerScore = 0;
     });
 };
 
