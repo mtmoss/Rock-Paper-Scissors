@@ -6,17 +6,20 @@ const arena = document.getElementById('arena');
 const overlay = document.getElementById('overlay');
 const finalResult = document.getElementById('finalResult');
 const retryButton = document.getElementById('retryButton');
-const buttons = Array.from(document.getElementsByClassName('button'));
+const playerBtns = Array.from(document.getElementsByClassName('playerBtn'));
+const computerBtns = Array.from(document.getElementsByClassName('computerBtn'));
 
 while (playerScore < 5 || computerScore < 5) {
-    buttons.forEach(button => {
+    playerBtns.forEach(button => {
         button.addEventListener('click',() => {
             let playerSelection = button.id;
             let computerSelection = computerPlay();
-                playRound(playerSelection,computerSelection);
-                if (playerScore === 5 || computerScore === 5) {
-                    declareWinner();
-                };
+            let computerResult = document.querySelector(`.computerBtn#${computerSelection}`);
+            computerResult.classList.add('active');
+            playRound(playerSelection,computerSelection);
+            if (playerScore === 5 || computerScore === 5) {
+                declareWinner();
+            };
         });
     });
     break;

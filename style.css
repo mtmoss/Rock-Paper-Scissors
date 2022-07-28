@@ -10,20 +10,6 @@ body {
     gap: 10px;
 }
 
-.playerArea {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: fit-content;
-}
-
-.heading, #runningScore {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: larger;
-    margin-top: 50px;
-    text-align: center;
-}
-
 .arena {
     display: flex;
     width: 450px;
@@ -32,7 +18,26 @@ body {
     align-items: center;
 }
 
-.button, #retryButton {
+.playerArea, .computerArea {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+h2, #runningScore {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.playerBtn, .computerBtn, .computerBtn.blank, #retryButton {
     border: 3px solid black;
     padding: 10px;
     margin: 20px;
@@ -41,9 +46,14 @@ body {
     font-weight: bold;
 }
 
-.button:hover, #retryButton:hover {
+.playerBtn:hover, .computerBtn.active, #retryButton:hover {
     background-color: coral;
     cursor: pointer;
+}
+
+.computerBtn:hover {
+    cursor:default;
+    background-color: white;
 }
 
 #resultArea, .intro {

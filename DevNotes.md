@@ -42,3 +42,7 @@ Resuming this project after 3 weeks away due to extra workload and doing intervi
     - `declareWinner()`
     - `restartGame()`
 - The score is shown as a number, should convert to string
+
+- Created new branch to try a different approach, since the other one wasn't working.
+- Changed UI to show computer choice for clarity
+- Can't get computer choice to reset to regular color
